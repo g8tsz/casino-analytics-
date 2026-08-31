@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card-bg: #18181b;
+  --border: #27272a;
+  --accent: #22c55e;
+  --accent-red: #ef4444;
+  --accent-amber: #f59e0b;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer utilities {
+  .stat-card {
+    @apply rounded-xl border border-zinc-800 bg-zinc-900/80 p-4 shadow-lg;
+  }
+  .alert-critical { @apply border-red-500/50 bg-red-950/30; }
+  .alert-high { @apply border-amber-500/50 bg-amber-950/20; }
+  .alert-medium { @apply border-yellow-500/30 bg-yellow-950/10; }
+  .alert-low { @apply border-zinc-500/30 bg-zinc-800/50; }
+}
